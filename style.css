@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and overall styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ... (existing CSS) ... */
+
+/* Navigation styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Header styling */
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Search bar styling */
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#search-input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#search-button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#search-button:hover {
+  background-color: #004499;
+}
+
+/* Book cards and list styling */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.add-to-cart-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  margin-right: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.card p {
+  margin: 5px 0;
+  /* 
+  Add these properties to limit the description to 5 rows 
+  Adjust the height as needed 
+  */
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* View Details button */
+.view-details-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.view-details-button:hover {
+  background-color: #0056b3;
+}
+
+/* Cart styling */
+#cart {
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+#cart:hover {
+  background-color: #0056b3;
+}
+
+#cart-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  color: #007bff;
+  border-radius: 50%;
+  padding: 5px 5px;
+  font-size: 12px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 25px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+#book-details-content {
+  padding: 40px;
+}
+
+#book-details-content .holder {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#book-details-content .image-holder {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+#book-details-content .holder p {
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
