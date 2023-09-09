@@ -16,13 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const bookDetailsHTML = `
 
           <div class="holder">
-          
           <div class="image-holder">
           <img src="${book.imageLinks ? book.imageLinks.thumbnail : ""}" alt="${
           book.title
         } Cover"/>
+        
           </div>
-
 
           <div>
           <h4>${book.title}</h4>
@@ -33,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           </div>
 
-            <h4>Publisher: ${book.publisher ? book.publisher : "Unknown"}</h4>
+          <h4>Publisher: ${book.publisher ? book.publisher : "Unknown"}</h4>
 
-            <h5>Published Date: ${
-              book.publishedDate ? book.publishedDate : "Unknown"
-            }</h5>
+          <h5>Published Date: ${
+            book.publishedDate ? book.publishedDate : "Unknown"
+          }</h5>
 
-            <h6>Page Count: ${book.pageCount ? book.pageCount : "Unknown"}</h6>
+          <h6>Page Count: ${book.pageCount ? book.pageCount : "Unknown"}</h6>
 
           `;
 

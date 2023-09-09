@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const bookList = document.getElementById("book-list");
-
   //Search
   const searchInput = document.getElementById("search-input");
   const searchButton = document.getElementById("search-button");
@@ -9,17 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartCount = document.getElementById("cart-count");
   let cart = [];
 
-  //Edit
-  // let cart = 0;
-
   // Function to update the cart count
   function updateCartCount() {
     cartCount.textContent = cart.length;
-    console.log(cart);
-
-    //Edit
-    // cart++;
-    // cartCount.textContent = cart;
   }
 
   // Function to add a book to the cart
@@ -72,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             //TODO!! Create an "Add to Cart" button with a data attribute to store the book ID
             const addToCartButton = document.createElement("button");
             addToCartButton.className = "add-to-cart-button";
-            addToCartButton.setAttribute("data-book-id", book.id);
+            addToCartButton.setAttribute("id", book.id);
             addToCartButton.textContent = "Add to Cart";
             // Append the button to the card
             card.appendChild(addToCartButton);
@@ -96,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             //TODO:: **  Event listener for the "View Details" button
-            bookList.addEventListener("click", (event) => {
+            viewDetailsButton.addEventListener("click", (event) => {
               const target = event.target;
               if (target.classList.contains("view-details-button")) {
                 const bookId = target.getAttribute("data-book-id");
@@ -109,10 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             //TODO:: ** Event listener for the "Add to Cart" button
-            bookList.addEventListener("click", (event) => {
+            addToCartButton.addEventListener("click", (event) => {
               const target = event.target;
               if (target.classList.contains("add-to-cart-button")) {
-                const bookId = target.getAttribute("data-book-id");
+                const bookId = target.getAttribute("id");
                 const selectedBook = books.find((book) => book.id === bookId);
                 if (selectedBook) {
                   addToCart(selectedBook);
